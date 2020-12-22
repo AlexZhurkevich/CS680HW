@@ -1,0 +1,16 @@
+package edu.umb.cs680.hw13;
+
+import java.util.Comparator;
+
+public class PieChartMulticast implements DJIAQuoteObserver, StockQuoteObserver {
+
+	public void updateStock(StockEvent stockEvent) {
+        System.out.println("Updating PieChartMulticast");
+        System.out.println("Quote: " + stockEvent.getQuote());
+    }
+
+	public void updateDJIA(DJIAEvent event) {
+		System.out.println("Updating PieChartMulticast");
+		System.out.println("DJIA: " + event.getQuote());
+	}
+}
